@@ -760,24 +760,24 @@ class GoogleMapsModule extends Module implements ModuleConfigInterface, ModuleTa
 			<input type="hidden" name="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
 			<input type="hidden" name="mod" value="googlemap">
 			<input type="hidden" name="mod_action" value="pedigree_map">
-			<table class="list_table" width="555">
+			<table class="table-options">
 				<tr>
-					<td class="descriptionbox wrap">
+					<th>
 						<?php echo I18N::translate('Individual'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<input class="pedigree_form" data-autocomplete-type="INDI" type="text" id="rootid" name="rootid" size="3" value="<?php echo $controller->root->getXref(); ?>">
 						<?php echo print_findindi_link('rootid'); ?>
 					</td>
-					<td class="topbottombar" rowspan="2">
+					<th rowspan="2">
 						<input type="submit" value="<?php echo I18N::translate('View'); ?>">
-					</td>
+					</th>
 				</tr>
 				<tr>
-					<td class="descriptionbox wrap">
+					<th>
 						<?php echo I18N::translate('Generations'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<select name="PEDIGREE_GENERATIONS">
 						<?php
 							for ($p = 3; $p <= $MAX_PEDIGREE_GENERATIONS; $p++) {

@@ -27,6 +27,7 @@ header {
 }
 
 /* Tbls and menus  */
+.table-options th,
 .descriptionbox, .descriptionbox a, .facts_label03,
 .topbottombar, .topbottombar a, .topbottombar h2,
 .facts_label, .facts_label a, .facts_label h2, .facts_label .date,
@@ -50,6 +51,7 @@ header {
 
 /* Base */
 #indi_header h3,
+.table-options td,
 .blockcontent, #search, #search-page-table .value, #edituser-table .value,
 .secondary-menu ul li a:hover, .ui-widget-header, #save-cancel,
 .optionbox, #indi_header .ui-state-active a:link,

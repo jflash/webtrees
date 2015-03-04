@@ -36,20 +36,20 @@ $controller
 <div id="descendancy-page"><h2><?php echo $controller->getPageTitle(); ?></h2>
 	<form method="get" name="people" action="?">
 		<input type="hidden" name="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
-		<table class="list_table">
+		<table class="table-options">
 			<tbody>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php	echo I18N::translate('Individual'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<input class="pedigree_form" data-autocomplete-type="INDI" type="text" id="rootid" name="rootid" size="3" value="<?php echo $controller->root->getXref(); ?>">
 						<?php echo print_findindi_link('rootid'); ?>
 					</td>
-					<td rowspan="3" class="descriptionbox">
+					<th rowspan="3">
 						<?php echo I18N::translate('Layout'); ?>
-					</td>
-					<td rowspan="3" class="optionbox">
+					</th>
+					<td rowspan="3">
 						<input type="radio" name="chart_style" value="0" <?php echo $controller->chart_style == 0 ? 'checked' : ''; ?>>
 						<?php echo  I18N::translate('List'); ?>
 						<br>
@@ -62,23 +62,23 @@ $controller
 						<input type="radio" name="chart_style" value="3" <?php echo $controller->chart_style == 3 ? 'checked' : ''; ?>>
 						<?php echo I18N::translate('Families'); ?>
 					</td>
-					<td rowspan="3" class="topbottombar">
+					<th rowspan="3">
 						<input type="submit" value="<?php echo I18N::translate('View'); ?>">
-					</td>
+					</th>
 				</tr>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Generations'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<?php echo edit_field_integers('generations', $controller->generations, 2, $WT_TREE->getPreference('MAX_DESCENDANCY_GENERATIONS')); ?>
 					</td>
 				</tr>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Show details'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td
 						<?php echo two_state_checkbox('show_full', $controller->showFull()); ?>
 					</td>
 				</tr>

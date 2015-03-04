@@ -39,20 +39,20 @@ $controller
 	<h2><?php echo $controller->getPageTitle(); ?></h2>
 	<form name="people" id="people" method="get" action="?">
 		<input type="hidden" name="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
-		<table class="list_table">
+		<table class="table-options">
 			<tbody>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<label for="rootid"><?php echo I18N::translate('Individual'); ?></label>
 					</td>
-					<td class="optionbox">
+					<td>
 						<input class="pedigree_form" data-autocomplete-type="INDI" type="text" name="rootid" id="rootid" size="3" value="<?php echo $controller->root->getXref(); ?>">
 						<?php echo print_findindi_link('rootid'); ?>
 					</td>
-					<td rowspan="3" class="descriptionbox">
+					<th rowspan="3">
 						<label><?php echo I18N::translate('Layout'); ?></label>
-					</td>
-					<td rowspan="3" class="optionbox">
+					</th>
+					<td rowspan="3">
 						<div>
 							<label>
 								<input type="radio" name="chart_style" value="0" onclick="statusDisable('cousins');" <?php echo $controller->chart_style == 0 ? 'checked' : ''; ?>>
@@ -82,15 +82,15 @@ $controller
 							</label>
 						</div>
 					</td>
-					<td rowspan="3" class="facts_label03">
+					<th rowspan="3">
 					<input type="submit" value="<?php echo I18N::translate('View'); ?>">
-					</td>
+					</th>
 				</tr>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo '<label>', I18N::translate('Generations'), '</label>'; ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<select name="PEDIGREE_GENERATIONS">
 							<?php
 								for ($i = 2; $i <= $MAX_PEDIGREE_GENERATIONS; $i++) {
@@ -105,10 +105,10 @@ $controller
 					</td>
 				</tr>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo '<label>', I18N::translate('Show details'), '</label>'; ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<?php echo checkbox('show_full', $controller->showFull());?>
 					</td>
 				</tr>

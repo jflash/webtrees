@@ -78,6 +78,8 @@ footer,
 #indi_main_blocks,
 #tabs,
 #save-cancel,
+.table-options td,
+.table-options th,
 .topbottombar {
 	border-radius: 3px;
 }
@@ -286,10 +288,6 @@ hr {
 table.center {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.list_table {
-	margin: 0 auto;
 }
 
 .list_label,
@@ -711,6 +709,12 @@ a:hover .nameZoom {
 	font-weight: 600;
 }
 
+/* List of options for charts, etc. */
+.table-options {
+	margin: 0 auto;
+}
+
+.table-options th,
 .descriptionbox {
 	font-size: 12px;
 	border: 1px solid #999;
@@ -718,6 +722,7 @@ a:hover .nameZoom {
 	padding: 3px;
 }
 
+.table-options td,
 .optionbox {
 	font-size: 12px;
 	border: solid #999 1px;
@@ -3288,10 +3293,6 @@ table.table-census-assistant th {
 }
 
 /* ====== Charts Styles ======== */
-#people label {
-	display:block;
-}
-
 #compact_chart,
 #fan_chart,
 .chart_common,

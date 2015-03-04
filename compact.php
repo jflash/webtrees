@@ -37,26 +37,26 @@ $controller
 	<h2><?php echo $controller->getPageTitle(); ?></h2>
 	<form name="people" id="people" method="get" action="?">
 		<input type="hidden" name="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
-		<table class="list_table">
+		<table class="table-options">
 			<tbody>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Individual'); ?>
-					</td>
-					<td class="optionbox vmiddle">
+					</th>
+					<td>
 						<input class="pedigree_form" data-autocomplete-type="INDI" type="text" name="rootid" id="rootid" size="3" value="<?php echo $controller->root->getXref(); ?>">
 						<?php echo print_findindi_link('rootid'); ?>
 					</td>
-					<td <?php echo $WT_TREE->getPreference('SHOW_HIGHLIGHT_IMAGES') ? 'rowspan="2"' : ''; ?> class="facts_label03">
+					<th <?php echo $WT_TREE->getPreference('SHOW_HIGHLIGHT_IMAGES') ? 'rowspan="2"' : ''; ?> class="facts_label03">
 						<input type="submit" value="<?php echo I18N::translate('View'); ?>">
-					</td>
+					</th>
 				</tr>
 				<?php if ($WT_TREE->getPreference('SHOW_HIGHLIGHT_IMAGES')) { ?>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Show images'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<input name="show_thumbs" type="checkbox" value="1" <?php echo $controller->show_thumbs ? 'checked' : ''; ?>>
 					</td>
 				</tr>

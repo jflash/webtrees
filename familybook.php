@@ -37,31 +37,31 @@ $controller
 	<h2><?php echo $controller->getPageTitle(); ?></h2>
 	<form method="get" name="people" action="?">
 		<input type="hidden" name="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
-		<table class="list_table">
+		<table class="table-options">
 			<tbody>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Individual'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<input class="pedigree_form" data-autocomplete-type="INDI" type="text" name="rootid" id="rootid" size="3" value="<?php echo $controller->root->getXref(); ?>">
 						<?php echo print_findindi_link('rootid'); ?>
 					</td>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Show details'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<?php echo two_state_checkbox("show_full",$controller->showFull());?>
-		  			</td>
-					<td rowspan="3" class="topbottombar vmiddle">
-						<input type="submit" value="<?php echo /* I18N: Submit button, on a form */ I18N::translate('View'); ?>">
 					</td>
+					<th rowspan="3">
+						<input type="submit" value="<?php echo /* I18N: Submit button, on a form */ I18N::translate('View'); ?>">
+					</th>
 				</tr>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo I18N::translate('Generations'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<select name="generations">
 							<?php
 							for ($i = 2; $i <= $WT_TREE->getPreference('MAX_DESCENDANCY_GENERATIONS'); $i++) {
@@ -74,10 +74,10 @@ $controller
 							?>
 						</select>
 					</td>
-					<td rowspan="2" class="descriptionbox">
+					<th rowspan="2">
 						<?php echo I18N::translate('Show spouses'); ?>
 					</td>
-					<td rowspan="2" class="optionbox">
+					<td rowspan="2">
 						<input type="checkbox" value="1" name="show_spouse" <?php echo $controller->show_spouse ? 'checked' : ''; ?>>
 					</td>
 				</tr>

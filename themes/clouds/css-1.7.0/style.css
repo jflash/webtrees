@@ -41,6 +41,8 @@ textarea,
 fieldset,
 .border1,
 .block,
+.table-options td,
+.table-options th,
 .descriptionbox,
 .facts_label,
 .facts_label03,
@@ -275,10 +277,6 @@ hr {
 table.center {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.list_table {
-	margin: 0 auto;
 }
 
 .list_label,
@@ -705,6 +703,12 @@ a:hover .nameZoom {
 	font-weight: 600;
 }
 
+/* List of options for charts, etc. */
+.table-options {
+	margin: 0 auto;
+}
+
+.table-options th,
 .descriptionbox {
 	font-size: 12px;
 	border: 1px solid #ccc;
@@ -712,6 +716,7 @@ a:hover .nameZoom {
 	padding: 3px;
 }
 
+.table-options td,
 .optionbox {
 	font-size: 12px;
 	background-color: #ecf5ff;
@@ -3292,10 +3297,6 @@ table.table-census-assistant th {
 }
 
 /* ====== Charts Styles ======== */
-#people label {
-	display:block;
-}
-
 #compact_chart,
 #fan_chart,
 .chart_common,
@@ -4225,6 +4226,7 @@ a.icon-udarrow:hover {
 /* ====== Theme Header ========= */
 
 /* Tbl hdrs and Light Text */
+.table-options th,
 .descriptionbox,
 .topbottombar,
 .topbottombar a,

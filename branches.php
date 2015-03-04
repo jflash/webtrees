@@ -30,13 +30,13 @@ $controller
 <div id="branches-page">
 	<h2><?php echo $controller->getPageTitle(); ?></h2>
 	<form name="surnlist" id="surnlist" action="branches.php">
-		<table class="facts_table width50">
+		<table class="table-options">
 			<tbody>
 				<tr>
-					<td class="descriptionbox">
+					<th>
 						<?php echo GedcomTag::getLabel('SURN'); ?>
-					</td>
-					<td class="optionbox">
+					</th>
+					<td>
 						<input data-autocomplete-type="SURN" type="text" name="surname" id="SURN" value="<?php echo Filter::escapeHtml($controller->getSurname()); ?>" dir="auto">
 						<input type="hidden" name="ged" id="ged" value="<?php echo Filter::escapeHtml(WT_GEDCOM); ?>">
 						<input type="submit" value="<?php echo I18N::translate('View'); ?>">

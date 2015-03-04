@@ -252,10 +252,6 @@ table.center {
 	margin-right: auto;
 }
 
-.list_table {
-	margin: 0 auto;
-}
-
 .list_label,
 .list_label_wrap {
 	color: #fff;
@@ -670,6 +666,12 @@ a:hover .nameZoom {
 	font-weight: 600;
 }
 
+/* List of options for charts, etc. */
+.table-options {
+	margin: 0 auto;
+}
+
+.table-options th,
 .descriptionbox {
 	color: #006;
 	font-size: 12px;
@@ -678,6 +680,7 @@ a:hover .nameZoom {
 	padding: 3px;
 }
 
+.table-options td,
 .optionbox {
 	background-color: #ecf5ff;
 	font-size: 12px;
@@ -3186,10 +3189,6 @@ table.table-census-assistant th {
 }
 
 /* ====== Charts Styles ======== */
-#people label {
-	display:block;
-}
-
 #compact_chart,
 #fan_chart,
 .chart_common,

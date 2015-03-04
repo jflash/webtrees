@@ -66,20 +66,20 @@ $medialist = QueryMedia::mediaList(
 <form action="medialist.php" method="get">
 	<input type="hidden" name="action" value="filter">
 	<input type="hidden" name="search" value="yes">
-	<table class="list_table">
+	<table class="table-options">
 		<tbody>
 			<tr>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo I18N::translate('Folder'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<?php echo select_edit_control('folder', $folders, null, $folder); ?>
 				</td>
 				<?php if (WT_USER_CAN_EDIT || WT_USER_CAN_ACCEPT): ?>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo I18N::translate('Sort order'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<select name="sortby">
 						<option value="title" <?php echo $sortby === 'title' ? 'selected' : ''; ?>>
 							<?php echo /* I18N: An option in a list-box */ I18N::translate('sort by title'); ?>
@@ -90,21 +90,21 @@ $medialist = QueryMedia::mediaList(
 					</select>
 				</td>
 				<?php else: ?>
-					<td class="descriptionbox wrap"></td>
-					<td class="optionbox wrap"></td>
+					<th></th>
+					<td></td>
 				<?php endif; ?>
 			</tr>
 			<tr>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo /* I18N: Label for check-box */ I18N::translate('Include subfolders'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<input type="checkbox" id="subdirs" name="subdirs" <?php echo $currentdironly ? '' : 'checked'; ?>>
 				</td>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo I18N::translate('Media objects per page'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<select name="max">
 						<?php
 						foreach (array('10', '20', '30', '40', '50', '75', '100', '125', '150', '200') as $selectEntry) {
@@ -119,16 +119,16 @@ $medialist = QueryMedia::mediaList(
 				</td>
 			</tr>
 			<tr>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo I18N::translate('Search filters'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<input id="filter" name="filter" value="<?php echo Filter::escapeHtml($filter); ?>" size="14" dir="auto">
 				</td>
-				<td class="descriptionbox wrap">
+				<th>
 					<?php echo I18N::translate('Columns per page'); ?>
-				</td>
-				<td class="optionbox wrap">
+				</th>
+				<td>
 					<select name="columns">
 						<?php
 						foreach (array('1', '2') as $selectEntry) {
@@ -143,14 +143,14 @@ $medialist = QueryMedia::mediaList(
 				</td>
 			</tr>
 			<tr>
-				<td class="descriptionbox wrap">
-				</td>
-				<td class="optionbox wrap">
+				<th>
+				</th>
+				<td>
 					<input type="submit" name="apply_filter" value="<?php echo I18N::translate('Search'); ?>">
 					<input type="submit" name="reset" value="<?php echo I18N::translate('Reset'); ?>">
 				</td>
-				<td class="descriptionbox wrap"></td>
-				<td class="optionbox wrap"></td>
+				<th></th>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
