@@ -50,7 +50,7 @@ msgstr " selles "
 #: statisticsplot.php:1195 statisticsplot.php:1245 statisticsplot.php:1295
 #: statisticsplot.php:1345
 msgid " per gender"
-msgstr " / mees-naine"
+msgstr " mees-naine"
 
 #: statisticsplot.php:889 statisticsplot.php:939 statisticsplot.php:993
 #: statisticsplot.php:1043 statisticsplot.php:1097 statisticsplot.php:1147
